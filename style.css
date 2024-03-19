@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins', 'sans-serif';
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('Images/body-image.jpg') no-repeat;
+    background-size: cover;
+}
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    z-index: 4;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav .logo{
+    color: #fff;
+    user-select: none;
+    font-size: 2em;
+    margin-left: 25px;
+    font-family: RoslindaleDisplayCondensed-Light, sans-serif;
+    cursor: pointer;
+}
+li,a,button{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-right: 25px;
+}
+li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+li a::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    border-radius:5px;
+    transform:scaleX(0);
+    background-color: #fff;
+    transform-origin: right;
+    transition:transform .5s;
+}
+li a:hover::after{
+    transform-origin:left;
+    transform:scaleX(1);
+}
+li a {
+    transition: all 0.3s ease 0s;
+}
+li a:hover{
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+.cta{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta:hover{
+    background-color: #fff;
+    color: #162938;
+}
+.wrapper{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transform: scale(0);
+    transition: all .5s;
+}
+.wrapper.active{
+    height: 470px;
+}
+.wrapper.active-popup{
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: all .5s;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 35px;
+}
+.wrapper .form-box.login{
+    transition: transform .28s ease;
+    transform: translateX(0);
+    visibility: visible;
+}
+.wrapper.active .form-box.login{
+    transition: none;
+    visibility: hidden;
+    transform: translateX(-400px);
+}
+.wrapper .form-box.Register{
+    position:absolute;
+    transition: none;
+    transform: translateX(400px);
+    visibility: hidden;
+}
+.wrapper.active .form-box.Register{
+    visibility:visible;
+    transition: transform .18s ease;
+    transform: translateX(0px);
+}
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    background-color: rgba(22,41,56,.7);
+    color: #fff;
+    display: flex;
+    border-bottom-left-radius:15px ;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+}
+.form-box h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -7px;
+}
+.input-box label{
+    position: absolute;
+    top: 27%;
+    left: 4px;
+    font-size: 1em;
+    font-weight: 500;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    outline:none;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: .9em;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+}
+.remember-forgot a{
+    color: #fff;
+    margin-right: 0;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    background: transparent;
+    margin-bottom: 6px;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #162938;
+    font-size: 1.2em;
+    transition: all .4s ease-in-out;
+}
+.login-register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 2px 0 10px;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: scale(1);
+    transition: transform .5s;
+}
+.box1,.box2,.box3{
+    background-repeat: repeat-x;
+    background-size: contain;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 7px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+}
+.hero,.bmw,.Honda{
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+.bmw{
+    width: 280px;
+}
+.logobtn{
+    width: auto;
+    padding: 0 10px;
+    margin-top: 30px;
+    margin-right: 0;
+}
+.menu.void{
+    transform: scale(0);
+    transition: transform .5s;
+}

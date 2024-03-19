@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Rental System</title>
+    <link rel="stylesheet" href="BMWstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="bike">
+        <nav>
+            <img src="Images/Logos/logo.png" class="logo" alt="">
+            <a href="#" class="btn">Rent Now!</a>
+        </nav>
+        <div class="content">
+            <h2>THE BMW</h2>
+            <h1>G 310 R</h1>
+            <p>The strength of the G 310 R is in its lightness and agility. The bike not only delivers fun in the big-city tumult, but also when you are redefining the city litmits when changing corners quickly.</p>
+            <h3>Choose Your Color</h3>
+            <div class="color-selector">
+                <div id="red"></div>
+                <div id="blue"></div>
+                <div id="black"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let redbtn = document.getElementById("red");
+        let bluebtn = document.getElementById("blue");
+        let blackbtn = document.getElementById("black");
+
+        redbtn.onclick = function(){
+            bike.style.backgroundImage = "url(Images/BMW/BMW1.png)"
+        }
+        bluebtn.onclick = function(){
+            bike.style.backgroundImage = "url(Images/BMW/BMW2.png)"
+        }
+        blackbtn.onclick = function(){
+            bike.style.backgroundImage = "url(Images/BMW/BMW3.png)"
+        }
+    </script>
+</body>
+</html>

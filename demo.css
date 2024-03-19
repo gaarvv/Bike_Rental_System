@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.menu{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.box1,.box2,.box3{
+    background-repeat: repeat-x;
+    background-size: contain;
+    border: 4px solid black;
+    border-radius: 15px;
+    height: 350px;
+    width: 350px;
+    background-color: rebeccapurple;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+button{
+    width: 80%;
+    height: 45px;
+    border-radius: 15px;
+    bottom: 0;
+    font-weight: 500;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 2px solid ;
+    color: #162938;
+    background: #fff;
+    border: 2px solid #fff;
+    outline: none;
+    margin-top: 35px;
+}
+button:hover{
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    background-color: #162938;
+    transition: all ease-in-out .5s;
+}
+.hero,.bmw,.Honda{
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+.bmw{
+    width: 280px;
+}

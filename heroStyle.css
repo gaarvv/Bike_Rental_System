@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'poppins', 'sans-serif';
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: url('Images/Hero/01.png')no-repeat;*/
+}
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    z-index: 4;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+nav .logo{
+    color: #162938;
+    user-select: none;
+    font-size: 2em;
+    margin-left: 25px;
+    font-family: RoslindaleDisplayCondensed-Light, sans-serif;
+    cursor: pointer;
+}
+li,a,button{
+    position: relative;
+    color: #162938;
+    font-weight: 500;
+    font-size: 1.1em;
+    margin-right: 25px;
+}
+li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+li a::after{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    border-radius:5px;
+    transform:scaleX(0);
+    background-color: #162938;
+    transform-origin: right;
+    transition:transform .5s;
+}
+li a:hover::after{
+    transform-origin:left;
+    transform:scaleX(1);
+}
+li a {
+    transition: all 0.3s ease 0s;
+}
+li a:hover{
+    transition: all 0.3s ease 0s;
+    color: #162938;
+}
+.cta{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #162938;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.cta:hover{
+    background-color: #162938;
+    color: #fff;
+    font-size: 1.2em;
+}
+.container{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content:flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.product, .detailBox{
+    margin:0 10px;
+    width: 40%;
+    height: 70%;
+    border: 2px solid black;
+}
+.detailBox{
+    flex-grow: 2;
+}
+.img-container{
+    width: 100%; /* Adjust the width as needed */
+    height: 80%; /* Adjust the height as needed */
+    background-image: url('Images/Hero/01.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image .5s;
+}
+.color-selector{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.yellow,.red,.black{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.yellow{
+    background-color: rgba(252,191,38,255);
+}
+.red{
+    background-color: rgba(206,43,48,255);
+}
+.black{
+    background-color: rgba(41,41,41,255);
+}
